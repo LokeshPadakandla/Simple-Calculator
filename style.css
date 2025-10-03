@@ -1,0 +1,89 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator box */
+.calculator {
+  background-color: #1e1e2f;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 320px;   /* ✅ Fits mobile & desktop */
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 1.6em;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2e2e3f;
+  color: #ffffff;
+  outline: none;
+}
+
+/* Buttons layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+button {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 12px;
+  background-color: #3b3b4f;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #575772;
+}
+
+/* Special buttons */
+.clear {
+  background-color: #ff6b6b;
+}
+
+.operator {
+  background-color: #ffa502;
+}
+
+.equals {
+  background-color: #2ed573;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  #display {
+    font-size: 1.3em;
+    height: 50px;
+  }
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
